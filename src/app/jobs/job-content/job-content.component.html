@@ -1,0 +1,28 @@
+<simple-notifications></simple-notifications>
+
+<div class="top">
+    <h1 class="title" *ngIf="job">{{ job.title }}</h1>
+</div>
+
+<div class="content" *ngIf="job">
+    <div class="container">
+
+        <article class="job-info job-info--featured">
+            <div class="information">
+                <h1>{{ job.title }}</h1>
+                <div class="job-info__spans">
+                    <span class="location">Location: {{job.location}}</span><br/><br/>
+                    <span [innerHtml]="job.content" class="job-content"></span>
+                </div>
+                <hr>
+            </div>
+        </article>
+
+        <article class="job-info job-info--featured">
+            <div class="contact">
+                <app-contact></app-contact>
+            </div>
+        </article>
+        
+    </div>
+</div>

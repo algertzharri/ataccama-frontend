@@ -1,0 +1,19 @@
+<simple-notifications></simple-notifications>
+
+<div class="top">
+    <h1 class="title">Jobs</h1>
+</div>
+
+<div class="content" *ngFor="let job of jobs">
+    <div class="container">
+        <article class="job-info job-info--featured">
+            <div class="information">
+                <h3><a href="job/{{ job.id }}">{{ job.title }}</a></h3>
+                <div class="job-info__spans">
+                    <span>{{ job.location }}</span>
+                </div>
+                <hr>
+            </div>
+        </article>
+    </div>
+</div>
